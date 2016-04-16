@@ -46,14 +46,15 @@ A virtual member in a base class expects its derived class define its own versio
 ## Exercise 15.8
 > Define static type and dynamic type.
 
-The static type of an expression is always known at compile time.
+The static type is the type specified in a variable declaration or the type of a value that an expression yields.
 
 The dynamic type is the type of the object in memory that the variable or expression represents. The dynamic type may not be known until run time.
 
 ## Exercise 15.9:
 > When is it possible for an expression’s static type to differ from its dynamic type? Give three examples in which the static and dynamic type differ.
 
-The static type of a pointer or reference to a base class may differ from its dynamic type. Anything like this can be an example.
+When a virtual function is called through an lvalue reference, rvalue reference, or pointer, the static and dynamic types may differ if a derived class type was bound to the reference or pointer through derived-to-base conversion.
+
 [Exercise 15.9](ex15.9/main.cpp)
 
 ## Exercise 15.10:
